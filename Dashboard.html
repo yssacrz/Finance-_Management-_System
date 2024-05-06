@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .content h1 {
+            margin-top: 30px;
+            color: rgb(255, 255, 255);
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            font-size: 80px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: oblique;
+        }
+
+        body {
+            background-position: center;
+            background-image: url(uigreen.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 2cm;
+        }
+
+        .logo img {
+            max-width: 80px;
+            margin-right: 15px;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        .logo-text {
+            font-family: Algerian, sans-serif;
+            font-size: 40px;
+            color: rgb(1, 96, 17);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .content {
+            min-height: calc(100vh - 200px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        .glow-btn {
+            background-color: #4caf4f00;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin-top: 50px;
+            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            border: #010101;
+        }
+
+        .glow-btn:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .glow-btn:active {
+            background-color: #45a049;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+            transform: translateY(2px);
+        }
+
+        .Quote {
+            position: absolute;
+            margin-top: 70px;
+            font-style: initial;
+            font-size: larger;
+            color: #000000;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            color: #ff0000;
+        }
+
+        .contact-section p {
+            text-align: center;
+            font-size: 30px;
+            font-style: Arial Bold;
+            color: #ffffff;
+        }
+        .about-section,
+        .contact-section {
+            text-align: center;
+            margin: auto;
+            width: 80%;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+       
+        .about-section p,
+        .contact-section p {
+            color: #006324; 
+            font-size: large;
+        }
+
+        
+        .about-section:hover,
+        .contact-section:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="other_page.html">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="logo">
+            <img src="PLSP-Logo-1.png" alt="Pamantasang Lungsod ng San Pablo Logo">
+            <span class="logo-text">Pamantasang Lungsod<br> Ng San Pablo</span>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Finance Management System</h1>
+        <a href="other_page.html" class="glow-btn">REGISTER NOW!</a>
+        <div class="Quote">
+            <p>REGISTER - RELAX - PAY</p>
+        </div>
+    </div>
+
+    <footer>
+        <!-- About Us section -->
+        <div id="about" class="content-section about-section" style="background-color: #4caf4f00;">
+            <h1>About Us</h1>
+            <p>Welcome to FMS: Your Hassle-Free School Bill Payment Solution.</p>
+            <p>At FMS, we recognize the challenges that students and parents face when it comes to registering and paying school bills. That's why we've developed a specialized finance management system tailored to streamline the process and ensure you never have to wait in line again.</p>
+        </div>
+
+        <!-- Contact Us section -->
+        <div id="contact" class="content-section contact-section" style="background-color: #98dfc327;">
+            <h1>Contact Us</h1>
+            <p>For inquiries, reach out to us at:</p>
+            <p>Phone: 09633275528</p>
+            <p>Email: engrrafael@gmail.com</p>
+        </div>
+    </footer>
+</body>
+</html>

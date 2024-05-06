@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registerpage</title>
+    <style>
+        h2 {
+            color: rgb(43, 255, 0);
+            text-align: center;
+            font-size: 50px;
+            font-family: Algerian;
+            border-radius: 10px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('plspbackround.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0);
+            padding: 30px;
+            width: 450px;
+            height: auto;
+            border: 5px solid #000000;
+            border-radius: 10px;
+            margin: 30px;
+        }
+
+        .receipt-container {
+            background-color: rgba(213, 250, 184, 0);
+            padding: 30px;
+            width: 300px;
+            height: 450px;
+            border: 5px solid #000000;
+            border-radius: 10px;
+            margin: 30px;
+            font-weight: bold;
+            font-size: 25px;
+            color: rgb(255, 253, 226);
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 18px;
+            color: #e5ff00;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #1bf207;
+            border-radius: 4px;
+            background-color: var(--input-color, #ffffff00);
+            color: #ffffff;
+            font-family: ARIAL BOLD;
+            font-size: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            color: #ff0000;
+        }
+
+        @keyframes blink {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: rgb(216, 0, 188); }
+            75% { color: yellow; }
+            100% { color: rgb(3, 228, 253); }
+        }
+
+        h1.blinking {
+            animation: blink 3s infinite;
+            position: fixed;
+            top: 5px;
+            text-align: center;
+            z-index: 9999;
+            font-size: 70px;
+            font-family: Arial Bold;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content">
+        <div class="form-container">
+            <form action="" method="POST">
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="course">Course:</label><br>
+                <input type="text" id="course" name="course"><br>
+                <label for="date">Dates:</label><br>
+                <input type="date" id="date" name="date"><br>
+                <label for="amount">Amount:</label><br>
+                <input type="number" id="amount" name="amount"><br><br>
+                <input type="submit" name="submit" value="Register">
+            </form>
+        </div>
+        <h1 class="blinking">RegisterNow!</h1>
+        <div class="receipt-container">
+            <h3>Receipt</h3>
+            <div id="receipt-content"></div>
+        </div>
+    </div>
+         
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const firstName = document.getElementById('fname').value;
+            const lastName = document.getElementById('lname').value;
+            const course = document.getElementById('course').value;
+            const date = document.getElementById('date').value;
+            const amount = document.getElementById('amount').value;
+
+            const receiptContent = `
+                <p><strong>First Name:</strong> ${firstName}</p>
+                <p><strong>Last Name:</strong> ${lastName}</p>
+                <p><strong>Course:</strong> ${course}</p>
+                <p><strong>Date:</strong> ${date}</p>
+                <p><strong>Amount:</strong> ${amount}</p>
+            `;
+            document.getElementById('receipt-content').innerHTML = receiptContent;
+        });
+    </script>
+</body>
+</html>
